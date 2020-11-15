@@ -1,0 +1,12 @@
+{
+  "name": "Tab Terminator",
+  "version": "1.0",
+  "description": "Simple extension that closes tab after a specific period of inactivity.",
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_page": "index.html",
+  "manifest_version": 2
+}
