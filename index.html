@@ -2,11 +2,18 @@
 <html>
   <head>
     <style>
+      input {
+        margin-bottom: 10px;
+      }
     </style>
+    <title>Tab terminator</title>
   </head>
   <body>
-    <h1>Set timeout after which your tabs will be automatically closed.</h1>
-    <input type="number" value="1200000">
-    <button id="setTimeout">Set new timeout</button>
+    <h1>Set timeout after which your unactive tabs will be automatically closed.</h1>
+    <input id="timeoutInput" type="number"> seconds
+    <br />
+    <button id="timeoutButton">Set new timeout</button>
+    <p id="message"></p>
+    <script src="index.js"></script>
   </body>
 </html>
