@@ -6,4 +6,4 @@ Experimental project to learn what it takes to create a browser extension.
 
 ## How to install it?
 
-Close this repo. In Chrome navigate to the extenstions page `chrome://extensions/` and click button `Load unpacked` and select this folder.
+Clone this repo. In Chrome navigate to the extenstions page `chrome://extensions/` and click button `Load unpacked` (make sure you have *Developer mode* on otherwise the button will be hidden) and select this folder.
