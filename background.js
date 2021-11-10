@@ -1,4 +1,4 @@
-const DEFAULT_TIMEOUT = 1200000; //10mins 1200000
+const DEFAULT_TIMEOUT = 1200000; //20 minutes
 
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.sync.get(["timeout"], function (res) {
