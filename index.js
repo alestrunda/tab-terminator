@@ -3,13 +3,22 @@ const timeoutInput = document.getElementById("timeoutInput");
 const message = document.getElementById("message");
 
 chrome.storage.sync.get(["timeout"], function (res) {
-  timeoutInput.value = res.timeout / 1000;
+  timeoutInput.value = toSeconds(res.timeout);
 });
 
 timeoutButton.onclick = function () {
-  let value = timeoutInput.value * 1000; //value is in seconds
-  chrome.storage.sync.set({ timeout: value }, function () {
-    console.log(`Timeout set: ${value}ms.`);
-    message.innerHTML = `Timeout updated to ${value / 1000}s.`;
+  const timeout = toMilliseconds(timeoutInput.value);
+
+  chrome.storage.sync.set({ timeout }, function () {
+    console.log(`Timeout set: ${timeout}ms.`);
+    message.innerHTML = `Timeout updated to ${toSeconds(timeout)}s.`;
   });
 };
+
+function toSeconds(milliseconds) {
+  return milliseconds / 1000;
+}
+
+function toMilliseconds(seconds) {
+  return seconds * 1000;
+}
